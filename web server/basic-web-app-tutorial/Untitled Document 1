@@ -1,0 +1,26 @@
+Names:
+	red1
+	green1
+	blue1
+	red2
+	green2
+	blue2
+
+
+Info:
+	newline(\n )for end line
+
+Function:
+	delay
+		followed by space then number in milisecond
+		could be done using time.sleep
+	restart
+		restart the code loop
+
+Operation:
+
+	{name}{operation sign}{number}
+		operation signs:
+			+,-,*,/
+	{name} = {number}
+

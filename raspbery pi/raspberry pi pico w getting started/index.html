@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color: rgb(45,45,45); color: white;">
+    <h1>Strip 1:</h1><p>R: {strip1RVal}, G: {strip1GVal}, B: {strip1BVal}</p>
+    <form>
+        <label>Red:</label>
+        <input type="number" max="133" min="0" id="valRed1" value="0" required>
+        <label>Blue:</label>
+        <input type="number" max="133" min="0" id="valBlue1" value="0" required>
+        <label>Green:</label>
+        <input type="number" max="133" min="0" id="valGreen1" value="0" required>
+        <input type="button" onclick="sendVal1()" value="submit">
+    </form>
+    <h1>Strip 2:</h1><p>R: {strip2RVal}, G: {strip2GVal}, B: {strip2BVal}</p>
+    <form>
+        <label>Red:</label>
+        <input type="number" max="133" min="0" id="valRed2" value="0" required>
+        <label>Blue:</label>
+        <input type="number" max="133" min="0" id="valBlue2" value="0" required>
+        <label>Green:</label>
+        <input type="number" max="133" min="0" id="valGreen2" value="0" required>
+        <input type="button" onclick="sendVal2()" value="submit">
+    </form>
+    <button onclick="stop()">Stop Program</button>
+    <button onclick="toggleLedIndicator('togglePwrLed')">Toggle Power Indicator</button>
+
+    <p>power LED is {pwrLedState}</p>
+    <p>Temperature is {temperature}</p>
+
+    <button onclick="toggleLedIndicator('toggleConnectLed')">Toggle Connection Indicator</button>
+    <p>Connection LED is {ConnectLedState}</p>
+
+<script>
+
+
+
+    function sendVal1(){
+
+        var valR = document.getElementById("valRed1").value;
+        var valG = document.getElementById("valGreen1").value;
+        var valB = document.getElementById("valBlue1").value;
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "/strip/1/valR/"+valR+"/valG/"+valG+"/valB/"+valB,true);
+        xhttp.send();
+    }
+    function sendVal2(){
+        var valR = document.getElementById("valRed2").value;
+        var valG = document.getElementById("valGreen2").value;
+        var valB = document.getElementById("valBlue2").value;
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "/strip/2/valR/"+valR+"/valG/"+valG+"/valB/"+valB,true);
+        xhttp.send();
+    }
+    function stop(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "/stop/")
+        xhttp.send();
+    }
+    function toggleLedIndicator(ledTogggleCommand){
+        xhttp = new XMLHttpRequest();
+        xhttp.open("GET", `/${ledTogggleCommand}/`)
+        xhttp.send();
+    }
+
+
+
+</script>
+</body>
+</html>

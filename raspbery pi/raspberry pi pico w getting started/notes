@@ -1,0 +1,10 @@
+raw requests:
+b'GET 
+/strip/1/valR/51/valG/25/valB/100 HTTP/1.1
+\r\nHost: 192.168.0.246
+\r\nConnection: keep-alive
+\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 OPR/100.0.0.0
+\r\nAccept: */*
+\r\nReferer: http://192.168.0.246/
+\r\nAccept-Encoding: gzip, deflate
+\r\nAccept-Language: en,fr-CA;q=0.9,fr;q=0.8,en-US;q=0.7\r\n\r\n'

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RGB control</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <div><span>Last update: </span><span id="time-container"></span></div>
+    <div><span>temp: </span><span id="temp-container"></span></div>
+    <hr>
+    <div class="content">
+        <h1>Led control:</h1>
+        <div class="window" id="led-container">
+            <div class="block" id="pwr-led-container">
+                <h2>Pwr Led:</h2>
+                <div name="pwr-led-state">
+                    <p>State of the pwr led: </p><p id="pwr-led-state"></p>
+                </div>
+                <button id="pwr-led-toggle" onclick="toggle_pwr()">toggle pwr Led</button>
+            </div>
+            <div class="block" id="connect-led-container">
+                <h2>Connect Led:</h2>
+                <div name="connect-led-state">
+                    <p>State of the connect led: </p><p id="connect-led-state"></p>
+                </div>
+                <button id="connect-led-toggle" onclick="toggle_connect()">toggle connect Led</button>
+            </div>
+        </div>
+        <div class="window" style="margin-top: 2rem;">
+            <h2>RGB control:</h2>
+            <div class="block">
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="block" id="strip1-control" style="margin: 1rem;">
+                <h3>Strip 1:</h3>
+                <form id="strip1-form">
+                    <div style="margin-bottom: 1rem; display: flex; align-items: center;">
+                        <label for="strip1-red">Red:</label>
+                        <input class="win10-thumb" id="strip1-red" type="range" min="0" max="133" step="1" value="133" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+                        <label for="strip1-green">Green:</label>
+                        <input class="win10-thumb" id="strip1-green" type="range" min="0" max="133" step="1" value="133">
+                        <label for="strip1-blue">Blue:</label>
+                        <input class="win10-thumb" id="strip1-blue" type="range" min="0" max="133" step="1" value="133">
+                    </div>
+                    <button type="submit" id="submit" >Submit</button>
+                </form>
+            </div>
+            <div class="block" id="strip2-control" style="margin: 1rem;">
+                <h3>Strip 2:</h3>
+                <form id="strip2-form">
+                    <div style="margin-bottom: 1rem;">
+                        <label for="strip2-red">Red:</label>
+                        <input id="strip2-red" type="range" min="0" max="133" step="1" value="133">
+                        <label for="strip2-green">Green:</label>
+                        <input id="strip2-green" type="range" min="0" max="133" step="1" value="133">
+                        <label for="strip2-blue">Blue:</label>
+                        <input id="strip2-blue" type="range" min="0" max="133" step="1" value="133">
+                    </div>
+                    <button id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id = "result-container"></div>
+    
+    <div class="grid-container">
+        <div class="grid-title">Title</div>
+        <div class="grid-labelR">labelR</div>
+        <div class="grid-rangeR">rangeR</div>
+        <div class="grid-labelG">labelG</div>
+        <div class="grid-rangeG">rangeG</div>
+        <div class="grid-labelB">labelB</div>
+        <div class="grid-rangeB">rangeB</div>
+        <div class="grid-range-valueR">valueR</div>
+        <div class="grid-range-valueG">valueG</div>
+        <div class="grid-range-valueB">valueB</div>
+        <div class="grid-button">button</div>
+    </div>
+
+
+</body>
+
+
+<script src="./script.js"></script>
+
+
+</html>

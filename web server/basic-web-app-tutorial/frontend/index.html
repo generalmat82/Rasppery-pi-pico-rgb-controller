@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RGB control</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <div style="display: flex;">
+        <p>Last updated: </p><p id="time-container">00:00:00</p>
+    </div>
+    <div style="display: flex;">
+        <p>Raspberry pi temp:</p><p id="temp-container"></p>
+    </div>
+
+    <hr style="margin-top: 1rem;margin-bottom: 1rem;">
+
+
+
+    <!-- ================================================================== -->
+
+
+
+    <div class="content">
+
+        <div class="window">
+            <h1>Led controll:</h1>
+            <div class="block">
+                <h2>Power Led:</h2>
+                <p>Current state: </p><p id="pwr-led-state"></p>
+                <button id="pwr-led-toggle" onclick="toggle_pwr()">Toggle power Led</button>
+            </div>
+            <div class="block">
+                <h2>Connection Led:</h2>
+                <p>Current state: </p><p id="connect-led-state"></p>
+                <button id="connect-led-toggle" onclick="toggle_connect()">Toggle connection Led</button>
+            </div>
+        </div>
+        <div class="window">
+            <h1>RGB control:</h1>
+            <div class="block">
+                <form id="strip1-form">
+                    <div class="grid-container">
+                        <h1 id="grid-title">Strip 1:</h1>
+                        
+                        <label for="strip1-red" id="grid-labelR1">Red:</label>
+                        <input id="grid-rangeR1" class="win10-thumb" type="range" min="0" max="133" step="1" value="133" onChange="rangeSlide(this.value,'r1')" onmousemove="rangeSlide(this.value, 'r1')">
+                        <label for="strip1-green1" id="grid-labelG">Green:</label>
+                        <input id="grid-rangeG1" class="win10-thumb" type="range" min="0" max="133" step="1" value="133" onChange="rangeSlide(this.value,'g1')" onmousemove="rangeSlide(this.value, 'g1')">
+                        <label for="strip1-blue1" id="grid-labelB">Blue:</label>
+                        <input id="grid-rangeB1" class="win10-thumb" type="range" min="0" max="133" step="1" value="133" onChange="rangeSlide(this.value,'b1')" onmousemove="rangeSlide(this.value,'b1')">
+                        <p id="grid-range-valueR1">0</p>
+                        <p id="grid-range-valueG1">0</p>
+                        <p id="grid-range-valueB1">0</p>
+                        <button type="submit" id="grid-button">submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="block">
+                <form id="strip2-form">
+                    <div class="grid-container">
+                        <h1 id="grid-title">Strip 2:</h1>
+
+                        <label for="strip2-red" id="grid-labelR2">Red:</label>
+                        <input id="grid-rangeR2" class="win10-thumb" type="range" min="0" max="133" step="1" value="133" onChange="rangeSlide(this.value,'r2')" onmousemove="rangeSlide(this.value, 'r2')">
+                        <label for="strip2-green2" id="grid-labelG">Green:</label>
+                        <input id="grid-rangeG2" class="win10-thumb" type="range" min="0" max="133" step="1" value="133" onChange="rangeSlide(this.value,'g2')" onmousemove="rangeSlide(this.value, 'g2')">
+                        <label for="strip2-blue2" id="grid-labelB">Blue:</label>
+                        <input id="grid-rangeB2" class="win10-thumb" type="range" min="0" max="133" step="1" value="133" onChange="rangeSlide(this.value,'b2')" onmousemove="rangeSlide(this.value,'b2')">
+                        <p id="grid-range-valueR2">0</p>
+                        <p id="grid-range-valueG2">0</p>
+                        <p id="grid-range-valueB2">0</p>
+                        <button type="submit" id="grid-button">submit</button>
+                    </div>
+                </form>
+            </div>
+            <form id="my-own-language">
+                <textarea id="textarea-code" style="height: 10rem; width: 10rem;"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+
+
+
+</body>
+
+
+<script src="./script.js"></script>
+
+
+</html>
