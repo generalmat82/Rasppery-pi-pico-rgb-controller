@@ -12,33 +12,12 @@ html,body{
     font-family: Arial, Helvetica, sans-serif;
     /* box-shadow: 0 8px 16px 0 rgba(26, 26, 26, 0.311); */
     color: var(--text_color);
-    background: radial-gradient(circle 500px at center, rgb(25, 25, 58) , rgb(var(--background_color_R),var(--background_color_G), var(--background_color_B)));
+    background: radial-gradient(circle 500px at center, rgb(37, 37, 37) , rgb(var(--background_color_R),var(--background_color_G), var(--background_color_B)));
 
 }
 
 
 /* ---------------------------------------------------------------------------- */
-
-
-/* button{
-    background-color: rgb(91, 91, 91);
-    border-radius: 10px;
-    cursor: pointer;
-    color: inherit;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    position: relative;
-    border: 2px solid rgb(1, 27, 69);
-    overflow: hidden;
-    transition-duration: 0.4s;
-    padding:1.5rem;
-} */
-/* 
-button:hover{
-    box-shadow: 0px 0px 15px 10px rgba(106, 104, 104, 0.24);
-    outline: none;
-} */
-
-
 
 button::after {
     opacity: 1;
@@ -94,7 +73,6 @@ button:active{
 
 /* ----------------------------------------------------------------------------------------- */
 
-
 menu, ul {
     display: flex;
     list-style: none;
@@ -130,8 +108,6 @@ a:active {
 
 /* -------------------------------- */
 
-
-
 .content{
     display: flex;
     flex-direction: column;
@@ -140,7 +116,8 @@ a:active {
 
 
 .window {
-    background-color: rgba(calc(var(--background_color_R)+4), calc(var(--background_color_G)+4), calc(var(--background_color_B)+4), 0.727);
+    --BG_color_variation: 15;
+    background-color: rgba(calc(var(--background_color_R)+var(--BG_color_variation)), calc(var(--background_color_G)+var(--BG_color_variation)), calc(var(--background_color_B)+var(--BG_color_variation)), 0.727);
     box-shadow: 6px 9px 17px -8px rgba(0, 0, 0, 0.332);
     border-radius: 10px;
     text-align: center;
@@ -148,9 +125,10 @@ a:active {
 }
 
 .block{
+    --BG_color_variation: 17;
     display:inline-block;
     text-align: center;
-    background-color: rgba(calc(var(--background_color_R) + 17), calc(var(--background_color_G) + 17), calc(var(--background_color_B) + 17), 0.742);
+    background-color: rgba(calc(var(--background_color_R) + var(--BG_color_variation)), calc(var(--background_color_G) + var(--BG_color_variation)), calc(var(--background_color_B) + var(--BG_color_variation)), 0.742);
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.269);
     border: rgba(81, 80, 80, 0.44) 1px solid;
     padding: 1rem;
@@ -201,8 +179,32 @@ font-family: "Source Code Pro", "Inconsolata", "Menlo", "Andale Mono", monospace
     gap: 10px;
     padding: 10px;
     align-items: center;
+    
   }
   
+
+
+
+.led-grid{
+    display: grid;
+    grid-template:
+      'TI TI'
+      'PWR CON';
+      grid-auto-rows: 1fr;
+      grid-auto-columns: 1fr;
+}
+
+#led-title{
+    grid-area: TI;
+}
+
+#led-power{
+    grid-area: PWR;
+}
+
+#led-connect{
+    grid-area: CON;
+}
 
 
 

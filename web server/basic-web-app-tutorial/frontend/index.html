@@ -24,18 +24,22 @@
     <div class="content">
 
         <div class="window">
-            <h1>Led controll:</h1>
-            <div class="block">
-                <h2>Power Led:</h2>
-                <p>Current state: </p><p id="pwr-led-state"></p>
-                <button id="pwr-led-toggle" onclick="toggle_pwr()">Toggle power Led</button>
-            </div>
-            <div class="block">
-                <h2>Connection Led:</h2>
-                <p>Current state: </p><p id="connect-led-state"></p>
-                <button id="connect-led-toggle" onclick="toggle_connect()">Toggle connection Led</button>
+            <div class="led-grid">
+                <h1 id="led-title">Led control:</h1>
+                <div class="block" id="led-power">
+                    <h2>Power Led:</h2>
+                    <p>Current state: </p><p id="pwr-led-state"></p>
+                    <button id="pwr-led-toggle" onclick="toggle_pwr()">Toggle power Led</button>
+                </div>
+                <div class="block" id="led-connect">
+                    <h2>connection Led:</h2>
+                    <p>Current state: </p><p id="connect-led-state"></p>
+                    <button id="connect-led-toggle" onclick="toggle_pwr()">Toggle power Led</button>
+                </div>
             </div>
         </div>
+
+
         <div class="window">
             <h1>RGB control:</h1>
             <div class="block">
