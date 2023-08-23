@@ -203,13 +203,23 @@ document.getElementById("strip2-form").addEventListener("submit", function(e) {
 })
 
 function rangeSlide(val,color){
-    if (color == "r1") {document.getElementById("grid-range-valueR1").innerHTML = val;}
-    else if (color == "g1") {document.getElementById("grid-range-valueG1").innerHTML = val;}
-    else if (color == "b1") {document.getElementById("grid-range-valueB1").innerHTML = val;}
+    if (color == "r1") {document.getElementById("grid-range-valueR1").value = val;}
+    else if (color == "g1") {document.getElementById("grid-range-valueG1").value = val;}
+    else if (color == "b1") {document.getElementById("grid-range-valueB1").value = val;}
     
-    else if (color == "r2") {document.getElementById("grid-range-valueR2").innerHTML = val;}
-    else if (color == "g2") {document.getElementById("grid-range-valueG2").innerHTML = val;}
-    else if (color == "b2") {document.getElementById("grid-range-valueB2").innerHTML = val;}
+    else if (color == "r2") {document.getElementById("grid-range-valueR2").value = val;}
+    else if (color == "g2") {document.getElementById("grid-range-valueG2").value = val;}
+    else if (color == "b2") {document.getElementById("grid-range-valueB2").value = val;}
+}
+
+function valueChange(val,color){
+    if (color == "r1") {document.getElementById("grid-rangeR1").value = val;}
+    else if (color == "g1") {document.getElementById("grid-rangeG1").value = val;}
+    else if (color == "b1") {document.getElementById("grid-rangeB1").value = val;}
+    
+    else if (color == "r2") {document.getElementById("grid-rangeR2").value = val;}
+    else if (color == "g2") {document.getElementById("grid-rangeG2").value = val;}
+    else if (color == "b2") {document.getElementById("grid-rangeB2").value = val;}
 }
 
 // setInterval(update_info, 10000)
@@ -246,8 +256,11 @@ const handleOnMouseMove = e => {
     target.style.setProperty("--mouse-y", `${y}px`);
 }
 
-// document.body.onmousemove = e => handleOnMouseMove(e);
 
 for(const card of document.querySelectorAll("button")){
     card.onmousemove = e => handleOnMouseMove(e);
 }
+
+['R1','G1','B1','R2','G2','B2'].forEach(i => {
+    rangeSlide(document.getElementById(`grid-range${i}`).value,i.toLowerCase());
+});

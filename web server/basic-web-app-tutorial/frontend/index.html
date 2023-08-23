@@ -53,9 +53,9 @@
                         <input id="grid-rangeG1" class="win10-thumb" type="range" min="0" max="133" step="1" value="133" onChange="rangeSlide(this.value,'g1')" onmousemove="rangeSlide(this.value, 'g1')">
                         <label for="strip1-blue1" id="grid-labelB">Blue:</label>
                         <input id="grid-rangeB1" class="win10-thumb" type="range" min="0" max="133" step="1" value="133" onChange="rangeSlide(this.value,'b1')" onmousemove="rangeSlide(this.value,'b1')">
-                        <p id="grid-range-valueR1">0</p>
-                        <p id="grid-range-valueG1">0</p>
-                        <p id="grid-range-valueB1">0</p>
+                        <input type="number" min="0" max="133" step="1" value="0" id="grid-range-valueR1" onchange="valueChange(this.value,'r1')">
+                        <input type="number" min="0" max="133" step="1" value="0" id="grid-range-valueG1" onchange="valueChange(this.value,'g1')">
+                        <input type="number" min="0" max="133" step="1" value="0" id="grid-range-valueB1" onchange="valueChange(this.value,'b1')">
                         <button type="submit" id="grid-button">submit</button>
                     </div>
                 </form>
@@ -71,9 +71,9 @@
                         <input id="grid-rangeG2" class="win10-thumb" type="range" min="0" max="133" step="1" value="133" onChange="rangeSlide(this.value,'g2')" onmousemove="rangeSlide(this.value, 'g2')">
                         <label for="strip2-blue2" id="grid-labelB">Blue:</label>
                         <input id="grid-rangeB2" class="win10-thumb" type="range" min="0" max="133" step="1" value="133" onChange="rangeSlide(this.value,'b2')" onmousemove="rangeSlide(this.value,'b2')">
-                        <p id="grid-range-valueR2">0</p>
-                        <p id="grid-range-valueG2">0</p>
-                        <p id="grid-range-valueB2">0</p>
+                        <input type="number" min="0" max="133" step="1" value="0" id="grid-range-valueR2" onchange="valueChange(this.value,'r2')">
+                        <input type="number" min="0" max="133" step="1" value="0" id="grid-range-valueG2" onchange="valueChange(this.value,'g2')">
+                        <input type="number" min="0" max="133" step="1" value="0" id="grid-range-valueB2" onchange="valueChange(this.value,'b2')">
                         <button type="submit" id="grid-button">submit</button>
                     </div>
                 </form>

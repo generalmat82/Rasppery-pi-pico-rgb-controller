@@ -73,12 +73,6 @@ button:active{
 
 /* ----------------------------------------------------------------------------------------- */
 
-menu, ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-
 a:link{
     color: var(--link_color);
     background-color: transparent;
@@ -150,9 +144,41 @@ font-family: "Source Code Pro", "Inconsolata", "Menlo", "Andale Mono", monospace
 #grid-rangeR1{grid-area: RR;}
 #grid-rangeG1{grid-area: RG;}
 #grid-rangeB1{grid-area: RB;}
-#grid-range-valueR1{grid-area: VR; }
-#grid-range-valueG1{grid-area: VG; }
-#grid-range-valueB1{grid-area: VB; }
+
+#grid-range-valueR1{
+    grid-area: VR;
+    color:white;
+    background-color:  rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border:1px solid rgb(69, 66, 66);
+    padding:1rem;
+    width: fit-content;
+    justify-self: center;
+    text-align: center;
+
+}
+#grid-range-valueG1{
+    grid-area: VG;
+    color:white;
+    background-color:  rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border:1px solid rgb(69, 66, 66);
+    padding:1rem;
+    width: fit-content;
+    justify-self: center;
+    text-align: center;
+}
+#grid-range-valueB1{
+    grid-area: VB;
+    color:white;
+    background-color:  rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border:1px solid rgb(69, 66, 66);
+    padding:1rem;
+    width: fit-content;
+    justify-self: center;
+    text-align: center;
+}
 #grid-button{grid-area: BS; }
 
 
@@ -163,9 +189,39 @@ font-family: "Source Code Pro", "Inconsolata", "Menlo", "Andale Mono", monospace
 #grid-rangeR2{grid-area: RR;}
 #grid-rangeG2{grid-area: RG;}
 #grid-rangeB2{grid-area: RB;}
-#grid-range-valueR2{grid-area: VR; }
-#grid-range-valueG2{grid-area: VG; }
-#grid-range-valueB2{grid-area: VB; }
+#grid-range-valueR2{
+    grid-area: VR;
+    color:white;
+    background-color:  rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border:1px solid rgb(69, 66, 66);
+    padding:1rem;
+    width: fit-content;
+    justify-self: center;
+    text-align: center;
+}
+#grid-range-valueG2{
+    grid-area: VG;
+    color:white;
+    background-color:  rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border:1px solid rgb(69, 66, 66);
+    padding:1rem;
+    width: fit-content;
+    justify-self: center;
+    text-align: center;
+}
+#grid-range-valueB2{
+    grid-area: VB;
+    color:white;
+    background-color:  rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border:1px solid rgb(69, 66, 66);
+    padding:1rem;
+    width: fit-content;
+    justify-self: center;
+    text-align: center;
+}
 #grid-button{grid-area: BS; }
 
 
