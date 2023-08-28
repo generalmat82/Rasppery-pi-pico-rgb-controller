@@ -1,7 +1,7 @@
 import json, network, socket, machine, sync_time
 from time import sleep
 from picozero import pico_temp_sensor, pico_led
-import secret # .py file with the sensitive credentials (wifiSSID, wifiPassword, ect)
+import sensitive_data # .py file with the sensitive credentials (wifiSSID, wifiPassword, ect)
 from sync_time import sync_time, strftime
 from request_process import request_handler
 from controll import toggle_led, update_rgb
@@ -10,8 +10,8 @@ from controll import toggle_led, update_rgb
 #- setup the functions for everything
 
 def connect_wifi():
-    ssid = secret.wifiSSID
-    password = secret.wifiPassword
+    ssid = sensitive_data.wifiSSID
+    password = sensitive_data.wifiPassword
 
     wlan = network.WLAN(network.STA_IF) # type: ignore
     wlan.active(True)
@@ -72,8 +72,6 @@ def setup():
 
 #¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
 try:
-
-
     ip,rtc,connection = setup()
     pico_led.off()
     pico_led.on()
