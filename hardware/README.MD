@@ -9,4 +9,7 @@ The project needed the following:
 
 
 # Hardware components:
-For the project I used
+For the project I used:
+* 3 [IRLB8721PBF-ND](https://www.digikey.ca/en/products/detail/infineon-technologies/IRLB8721PBF/2127670) per strips
+* 1 [RASPBERRY PI PICO W RP2040](https://www.digikey.ca/en/products/detail/raspberry-pi/SC0918/16608263)
+* 1 [S7002-ND](https://www.digikey.ca/en/products/detail/sullins-connector-solutions/PPTC041LFBN-RC/810144) per strips
